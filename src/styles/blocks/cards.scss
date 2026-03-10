@@ -4,7 +4,7 @@
   margin: 0 auto;
   padding: $size-50px $size-40px;
 
-  gap: 46px 48px;
+  gap: $gap-row $gap-column;
 
   grid-template-columns: repeat(1, $width-sizing-200px);
   justify-content: center;
@@ -26,8 +26,8 @@
   box-sizing: border-box;
   width: $width-sizing-200px;
   border: 1px solid $border-color;
-  border-radius: 5px;
-  padding: 32px $size-16px $size-16px;
+  border-radius: $border-radius-small;
+  padding: $card-padding-top $size-16px $size-16px;
   background: $bckground-white-color;
 
   transition: transform $transition-duration;
@@ -42,9 +42,11 @@
   &__title {
     margin: 0 0 $size-4px;
     font-size: $font-size-12px;
-    line-height: 18px;
+    line-height: $card-line-height;
     font-weight: $base-font-weight500;
     color: $main-accent-color;
+
+    transition: color $transition-duration;
   }
 
   &:hover {
@@ -79,12 +81,12 @@
 
   &__price-name {
     font-size: $font-size-12px;
-    line-height: 18px;
+    line-height: $card-line-height;
   }
 
   &__price {
     font-size: $size-16px;
-    line-height: 18px;
+    line-height: $card-line-height;
     font-weight: 700;
     color: $main-accent-color;
   }
@@ -97,9 +99,9 @@
     box-sizing: border-box;
     height: $size-40px;
     border: 1px solid $main-color;
-    border-radius: 5px;
+    border-radius: $border-radius-small;
 
-    font-size: 14px;
+    font-size: $base-line-height;
     line-height: $size-16px;
     font-weight: 700;
     text-decoration: none;

@@ -26,7 +26,7 @@
 }
 
 .nav__item {
-  margin-left: 20px;
+  margin-left: $nav-item-margin-left;
 
   &:first-child {
     margin-left: 0;
@@ -37,7 +37,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  height: 60px;
+  height: $nav-link-height;
   font-size: $font-size-12px;
   font-weight: $base-font-weight500;
   white-space: nowrap;
@@ -63,7 +63,7 @@
     right: 0;
 
     height: $size-4px;
-    border-radius: 8px;
+    border-radius: $nav-border-radius-small;
     background-color: $main-color;
   }
 }
