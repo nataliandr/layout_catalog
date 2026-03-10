@@ -2,15 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 50px;
+  padding: 0 $size-50px;
 
-  background: #fff;
+  background: $bckground-white-color;
 }
 
 .logo {
   display: block;
-  height: 40px;
-  width: 40px;
+  height: $size-40px;
+  width: $size-40px;
 
   &__image {
     height: 100%;
@@ -38,14 +38,14 @@
   display: flex;
   align-items: center;
   height: 60px;
-  font-size: 12px;
-  font-weight: 500;
+  font-size: $font-size-12px;
+  font-weight: $base-font-weight500;
   white-space: nowrap;
   text-transform: uppercase;
   text-decoration: none;
   color: $main-accent-color;
 
-  transition: color 300ms;
+  transition: color $transition-duration;
 
   &:hover {
     color: $main-color;
@@ -62,7 +62,7 @@
     left: 0;
     right: 0;
 
-    height: 4px;
+    height: $size-4px;
     border-radius: 8px;
     background-color: $main-color;
   }

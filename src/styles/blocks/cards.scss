@@ -2,61 +2,61 @@
   display: grid;
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 50px 40px;
+  padding: $size-50px $size-40px;
 
   gap: 46px 48px;
 
-  grid-template-columns: repeat(1, 200px);
+  grid-template-columns: repeat(1, $width-sizing-200px);
   justify-content: center;
 
   @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, $width-sizing-200px);
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, $width-sizing-200px);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, $width-sizing-200px);
   }
 }
 
 .card {
   box-sizing: border-box;
-  width: 200px;
+  width: $width-sizing-200px;
   border: 1px solid $border-color;
   border-radius: 5px;
-  padding: 32px 16px 16px;
+  padding: 32px $size-16px $size-16px;
   background: $bckground-white-color;
 
-  transition: transform 300ms;
-
-  &:hover {
-    transform: scale(1.2);
-  }
-
-  &:hover .card__title {
-    color: #34568b;
-  }
+  transition: transform $transition-duration;
 
   &__image {
     display: block;
-    margin: 0 auto 40px;
+    margin: 0 auto $size-40px;
     width: 160px;
     height: 134px;
   }
 
   &__title {
-    margin: 0 0 4px;
-    font-size: 12px;
+    margin: 0 0 $size-4px;
+    font-size: $font-size-12px;
     line-height: 18px;
-    font-weight: 500;
+    font-weight: $base-font-weight500;
     color: $main-accent-color;
   }
 
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:hover &__title {
+    color: $hover-card-title-color;
+  }
+
   &__code {
-    margin-bottom: 16px;
+    margin-bottom: $size-16px;
   }
 
   &__review-block {
@@ -74,16 +74,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: $size-16px;
   }
 
   &__price-name {
-    font-size: 12px;
+    font-size: $font-size-12px;
     line-height: 18px;
   }
 
   &__price {
-    font-size: 16px;
+    font-size: $size-16px;
     line-height: 18px;
     font-weight: 700;
     color: $main-accent-color;
@@ -95,18 +95,22 @@
     align-items: center;
 
     box-sizing: border-box;
-    height: 40px;
+    height: $size-40px;
     border: 1px solid $main-color;
     border-radius: 5px;
 
     font-size: 14px;
-    line-height: 16px;
+    line-height: $size-16px;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
 
     color: $bckground-white-color;
     background-color: $main-color;
+
+    transition:
+      color $transition-duration,
+      background-color $transition-duration;
 
     &:hover {
       color: $main-color;
