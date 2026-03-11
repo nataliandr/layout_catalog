@@ -1,7 +1,7 @@
 @import './variables';
-@import './blocks/cards';
-@import './blocks/stars';
-@import './blocks/header';
+@import './cards';
+@import './stars';
+@import './header';
 
 html {
   font-family: $base-font-family;
